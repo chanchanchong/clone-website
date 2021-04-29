@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <style>
+     
+ *{
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+        font-weight: 200;
+      }
+
+      .nav-link{
+        font-size: 14px;
+        color: #464646;
+        font-family: Montserrat, sans-serif;
+        font-weight: 600;
+        font-style: normal;
+      }
+
+      .nav-link:hover{
+        color: black;
+      }
+
+      .carousel-caption slide1{
+        position: absolute;
+        top: 55%;
+        transform: translateY(-80%);
+        left: -8%;
+      }
+
+      .slide1 h1{
+        transform: translateX(-400px);
+        font-weight: 700;
+        color: white;
+      }
+
+      .slide1 p{
+        font-weight: 600;
+        transform: translateX(-400px);
+      }
+
+      .btn0{
+        background-color: white;
+        transform: translateX(-400px);
+        height: 45px;
+        width: 150px;
+        color: black;
+        outline: none;
+        border: none;
+        font-size: smaller;
+      }
+
+      .btn0:hover{
+        background-color: black;
+        color: white;
+        transition: 0.4s;
+      }
+
+      .card-img-overlay h6{
+        transform: translateY(210px);
+        padding-left: 0px;
+        padding-top: 15px;
+        font-family: "Avenir Next";
+        font-size: 18px;
+       font-weight: 200;
+        font-style:oblique;
+        
+      }
+
+      .card{
+        transition: transform 0.2s ease;
+        box-shadow: 0 4px 6px 0 rgba(22, 22, 26, 0.18);
+        border-radius: 0;
+        border: 0;
+        margin-bottom: 1.5em;
+        padding-bottom: 30px;
+      }
+      
+
+      .card img{
+        width: 100%;
+      }
+
+      .card:hover{
+       
+        transform: scale(1.1);
+        max-width: 100%;
+      }
+
+
+      .collection h3{
+        padding: 0px;
+        margin: 10px;
+        font-family: Montserrat, sans-serif;
+        font-weight: 600;
+       font-style:oblique;
+       font-stretch: ultra-expanded;
+      }
+
+      .collection a{
+        color: black;
+        font-weight: bold;
+      }
+
+      .collection a:hover{
+        color: grey;
+        font-weight: bold;
+      }
+
+
+      .carousel-caption slide2{
+        position: absolute;
+        top: 55%;
+        transform: translateY(-80%);
+        left: -8%;
+      }
+
+      .slide2 h1{
+        transform: translateX(-310px);
+        font-weight: 700;
+        color: black;
+      }
+
+      .slide2 p{
+        font-weight: 600;
+        transform: translateX(-310px);
+        color: black;
+      }
+
+      .btn1{
+        background-color: white;
+        transform: translateX(-250px);
+        height: 45px;
+        width: 150px;
+        font-weight: bold;
+        color: black;
+        outline: none;
+        border: none;
+        font-size: smaller;
+      }
+
+      .btn1:hover{
+        background-color: black;
+        color: white;
+        transition: 0.4s;
+      }
+
+      .site-footer{
+        background-color: #26272b;
+        padding: 45px 0 20px;
+        font-size: 13px;
+        line-height: 24px;
+        background-color: #fa8a75;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+        font-size: 14px;
+        line-height: 1.6;
+        color: black;
+        font-family: "Avenir Next", sans-serif;
+        font-weight: 200;
+        font-style: normal;
+        -webkit-font-smoothing: antialiased;
+        -webkit-text-size-adjust: 100%;
+      }
+
+      .site-footer hr{
+        border-top-color: #bbb;
+        opacity: 0.5;
+      }
+      .site-footer hr.small {
+        margin: 20px 0;
+      }
+
+   
+
+      .site-footer a{
+        color: #000000;
+        font-weight: 100;
+      }
+
+      .site-footer a:hover{
+        color: white;
+        text-decoration: none;
+      }
+
+      .footer-links{
+        padding-left: 0;
+        list-style: none;
+      }
+
+      .footer-links li{
+        display: block;
+        
+        padding-bottom: 5px;
+      }
+
+      .footer-links a{
+        color: #000000;
+      }
+
+      .footer-links a:active,
+      .footer-links a:focus,
+      .footer-links a:hover{
+        color: #ffffff;
+        text-decoration: none;
+      }
+
+      .footer-link.inline li{
+        display: inline-block;
+      }
+
+
+      .site-footer .social-icons{
+        text-align: right;
+      }
+
+      .site-footer .social-icons a{
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        margin-left: 6px;
+        margin-right: 0;
+        border-radius: 100%;
+        background-color: #33353d;
+      }
+
+      .copyright-text{
+        margin: 0;
+      }
+
+      @media (max-width: 991px){
+        .site-footer [class^="col-"]{
+          margin-bottom: 30px;
+        }
+      }
+
+      @media (max-width: 767px){
+        .site-footer{
+          padding-bottom: 0;
+        }
+      }
+
+      .site-footer .copyright-text,
+      .site-footer .social-icons{
+        text-align: center;
+      }
+
+      .social-icons{
+        padding-left: 0;
+        margin-bottom: 0;
+        list-style: none;
+      }
+
+      .social-icons li{
+        display: inline-block;
+        margin-bottom: 4px;
+      }
+      .social-icons a{
+        background-color: #eceeef;
+        color: #818a91;
+        font-size: 16px;
+        display: inline-block;
+        line-height: 44px;
+        width: 44px;
+        height: 44px;
+        text-align: center;
+        margin-right: 8px;
+        border-radius: 100%;
+        -webkit-transition: all 0.2s linear;
+        -o-transition: all 0.2s linear;
+        transition: all 0.2 linear;
+      }
+
+      .social-icons a:active,
+      .social-icons a:focus,
+      .social-icons a:hover{
+        color: white;
+        background-color: #29aafe;
+      }
+
+      .social-icons a.facebook:hover{
+        background-color: #3b5998;
+      }
+
+      .social-icons a.twitter:hover{
+        background-color: #ed0000;
+      }
+
+      .social-icons a.instagram:hover{
+        background-color: #ea4c89;
+      }
+
+      @media (max-width: 767 px){
+        .social-icons list-style{
+          display: block;
+          margin-right: 0;
+          font-weight: 600;
+        }
+      }
+
+    .navbar-brand{
+      margin: 0%;
+      padding: 0%;
+    }
+
+    .parallex{
+      background: url('https://cdn.shopify.com/s/files/1/0049/2381/8053/files/slideshow_2_127c1eeb-b19c-4e10-a985-96886d9d2bf5_1200x.jpg?v=1597310018') no-repeat;
+      background-attachment: fixed;
+      background-size: 100% 100%;
+      width: 100%;
+    }
+
+
+
+  }
+    </style>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+    <title>Colourette Cosmetics</title>
+
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+          <div class="collapse navbar-collapse " id="navbarNav">
+              <ul class="navbar-nav mx-auto">
+                <li class="nav-item pb-0">
+                  <a class="navbar-brand" href="index.html">
+                      <img src="https://cdn.shopify.com/s/files/1/0049/2381/8053/files/LOGO_big_1200x.png?v=1546573509"alt="" width="250" height="110" class="d-inline-block align-mid">
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+    </nav>
+    <nav class="navbar navbar-expand-lg bh-white">
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item pb-0">
+              <a class="nav-link pr-4" href="newarrival.html">NEW ARRIVALS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link pr-4" href="bestsellers.html">BEST SELLERS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link pr-4" href="product.html">PRODUCTS</a>
+            </li>
+            <li class="nav-item pr-4">
+              <a class="nav-link" href="promo.html">PROMOS</a>
+            </li> 
+          </ul>
+        </div>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </nav>
+    <!--end of nav-->
+    <!--sliderr-->
+    <section class="parallex py-5">
+      <div class="container py-5">
+        <div class="row py-3">
+          <div class="col-lg-9 mx-auto">
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel" data-interval="2000">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="" class="d-block w-100" alt="...">
+          <div class="carousel-caption slide1 d-none d-md-block">
+            <div class="container">
+              <div class="row justify-content-start ">
+                <div class="col-lg-8 mx-auto">
+
+                  <button class="btn0 mt-3 ml-2">
+                    <a href="https://colourettecosmetics.com/" style="color:inherit">Shop Now</a>
+                    </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="collection">
+      <div class="container py-5">
+        <h3 class="text-center ml-0">NEW ARRIVALS</h3>
+          <div class="row py-5">
+
+            <div class="col-md-3">
+              <div class="card">
+                <img src="https://cdn.shopify.com/s/files/1/0049/2381/8053/products/ColouretteColourglazeDaydream_300x.jpg?v=1600932530" class="class-img">
+                <a href="https://colourettecosmetics.com/collections/bestsellers/products/colourglaze-in-daydream"class="stretched-link"></a>
+              </div>
+              <div class="text-center">
+                <h6><i>Colourglaze in Daydream</i></h6>
+                <h6>₱349.00</h6>
+              </div>
+            </div>
+            
+            <div class="col-md-3">
+              <div class="card">
+                <img src="https://cdn.shopify.com/s/files/1/0049/2381/8053/products/ColouretteColourglazeSerotonin_600x.jpg?v=1600932961" class="class-img">
+                <a href="https://colourettecosmetics.com/collections/bestsellers/products/colourglaze-in-serotonin"class="stretched-link"></a>
+              </div>
+              <div class="text-center">
+                <h6><i>Colourglaze in Serotonin</i></h6>
+                <h6>₱349.00</h6>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="card">
+                <img src="//cdn.shopify.com/s/files/1/0049/2381/8053/products/Colourglaze-Self-loveset_1000x1000.jpg?v=1601273094" class="class-img">
+                <a href="https://colourettecosmetics.com/collections/bestsellers/products/colourglaze-self-love-set"class="stretched-link"></a>
+              </div>
+              <div class="text-center">
+                <h6><i>Colourglaze Self-Love Set</i></h6>
+                <h6>₱1,299.00</h6>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="card">
+                <img src="//cdn.shopify.com/s/files/1/0049/2381/8053/products/Indiv-Beachy_1000x1000.jpg?v=1597295302" class="class-img">
+                <a href="https://colourettecosmetics.com/collections/bestsellers/products/coloursnap-in-beachy"class="stretched-link"></a>
+              </div>
+              <div class="text-center">
+                <h6><i>Coloursnap in Beachy</i></h6>
+                <h6>₱299.00</h6>
+              </div>
+            </div>
+            
+            <div class="col-md-3">
+              <div class="card">
+                <img src="//cdn.shopify.com/s/files/1/0049/2381/8053/products/Indiv-Hunny_1000x1000.jpg?v=1597295791" class="class-img">
+                <a href="https://colourettecosmetics.com/collections/bestsellers/products/coloursnap-in-hunny"class="stretched-link"></a>
+              </div>
+              <div class="text-center">
+                <h6><i>Coloursnap in Hunny</i></h6>
+                <h6>₱299.00</h6>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="card">
+                <img src="//cdn.shopify.com/s/files/1/0049/2381/8053/products/Indiv-Mood_1000x1000.jpg?v=1597296047" class="class-img">
+                <a href="https://colourettecosmetics.com/collections/bestsellers/products/coloursnap-in-mood"class="stretched-link"></a>
+              </div>
+              <div class="text-center">
+                <h6><i>Coloursnap in Mood</i></h6>
+                <h6>₱299.00</h6>
+              </div>
+            </div>
+            
+            <div class="col-md-3">
+              <div class="card">
+                <img src="https://cdn.shopify.com/s/files/1/0049/2381/8053/products/ColouretteColourglazeDaydream_300x.jpg?v=1600932530" class="class-img">
+                <a href="https://colourettecosmetics.com/collections/bestsellers/products/colourglaze-in-daydream"class="stretched-link"></a>
+              </div>
+              <div class="text-center">
+                <h6><i>Colourglaze in Daydream</i></h6>
+                <h6>₱349.00</h6>
+              </div>
+            </div>
+            
+            <div class="col-md-3">
+              <div class="card">
+                <img src="//cdn.shopify.com/s/files/1/0049/2381/8053/products/24-7KITRESIZED_1000x1000.jpg?v=1601275931" class="class-img">
+                <a href="https://colourettecosmetics.com/collections/bestsellers/products/24-7-kit"class="stretched-link"></a>
+              </div>
+              <div class="text-center">
+                <h6><i>Colourtint 24/7 Kit</i></h6>
+                <h6>₱2,499.00</h6>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="card">
+                <img src="//cdn.shopify.com/s/files/1/0049/2381/8053/products/Colourtints-BossBabe_1000x1000.jpg?v=1601278460" class="class-img">
+                <a href="https://colourettecosmetics.com/collections/bestsellers/products/colourtint-boss-babe-best-bundle"class="stretched-link"></a>
+              </div>
+              <div class="text-center">
+                <h6><i>Colourtint Boss Babe Best Bundlet</i></h6>
+                <h6>₱1,299.00</h6>
+              </div>
+            </div>
+
+          </div>
+        </h1>
+      </div>
+    </section>
+    <!--end of carousel-->
+
+   
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel" data-interval="2000">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://cdn.shopify.com/s/files/1/0049/2381/8053/files/banner-_bbg_womens_month_1800x.jpg?v=1583136132" class="d-block w-100" alt="...">
+          <div class="carousel-caption slide1 d-none d-md-block">
+            <div class="container">
+              <div class="row justify-content-start ">
+                <div class="col-lg-8 mx-auto">
+
+                  <button class="btn0 mt-3 ml-2">
+                    <a href="https://colourettecosmetics.com/" style="color:inherit">Shop Now</a>
+                    </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-6 col-md-4 text-center">
+            <ul class="footer-links inline">
+              <li><a href="https://colourettecosmetics.com/pages/about-us">About Us</a></li>
+              <li><a href="https://colourettecosmetics.com/pages/branches">Branches</a></li>
+              <li><a href="https://colourettecosmetics.com/pages/colourette-partners">Colourette Partners</a></li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-4  text-center">
+            <ul class="footer-links inline">
+              <li><a href="https://colourettecosmetics.com/pages/proof-of-payment">Proof of Payment</a></li>
+              <li><a href="https://colourettecosmetics.com/pages/order-cancellation-form">Order Cancellation Form</a></li>
+              <li><a href="https://colourettecosmetics.com/pages/returns-and-exchange-policy">Returns and Exchange</a></li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-4  text-center">
+            <ul class="footer-links inline">
+              <li><a href="https://colourettecosmetics.com/pages/contact-us">CONTACT US</a></li>
+              <li><a href="https://colourettecosmetics.com/pages/privacy-policy">Privacy Policy</a></li>
+              <li><a href="https://colourettecosmetics.com/pages/faqs">Frequently Asked Questions</a></li>
+
+            </ul>
+
+          </div>
+        </div>
+        <hr class="small">
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">Copyright &copy; 2021  by
+              <a href="https://colourettecosmetics.com/">Colourette Cosmetics </a>
+            </p>
+          </div>
+          <div class="col-md-4 col-sm-6 col-12">
+            <ul class="social-icons">
+              <li><a class="facebook" href="https://www.facebook.com/ColouretteBEIT"><i class="bi bi-facebook"></i></a></li>
+              <li><a class="twitter" href="https://www.youtube.com/channel/UCBFDuXFHZqVBNhoVy-8m4HQ"><i class="bi bi-youtube"></i></a></li>
+              <li><a class="instagram" href="https://www.instagram.com/colourette.cosmetics/"><i class="bi bi-instagram"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+  </body>
+</html>

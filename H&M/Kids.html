@@ -1,0 +1,678 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <style>
+     
+ *{
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+        font-weight: 200;
+      }
+
+      .nav-link{
+        font-size: 14px;
+        color: #464646;
+        "HM Sans Regular","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",Osaka,"メイリオ",Meiryo,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;
+        font-weight: 600;
+        font-style: normal;
+      }
+
+      .nav-link:hover{
+        color: black;
+        text-decoration: underline;
+      }
+
+
+      .carousel-caption slide1{
+        position: absolute;
+      }
+
+      .slide1 h1{
+        font-weight: 700;
+        color: white;
+      }
+
+      .slide1 p{
+        font-weight: 600;
+      }
+
+      .btn0{
+        background-color: white;
+        height: 45px;
+        width: 150px;
+        color: black;
+        outline: none;
+        border: none;
+        font-size: smaller;
+      }
+
+      .btn0:hover{
+        background-color: black;
+        color: white;
+        transition: 0.4s;
+      }
+
+      .card-img-overlay h6{
+        transform: translateY(210px);
+        padding-left: 0px;
+        padding-top: 15px;
+        font-family: "Avenir Next";
+        font-size: 18px;
+       font-weight: 200;
+        font-style:oblique;
+        
+      }
+
+      .card{
+        transition: transform 0.2s ease;
+        box-shadow: 0 4px 6px 0 rgba(22, 22, 26, 0.18);
+        border-radius: 0;
+        border: 0;
+        margin-bottom: 1.5em;
+        padding-bottom: 30px;
+      }
+      
+
+      .card img{
+        width: 100%;
+      }
+
+      .card:hover{
+       
+        transform: scale(1.1);
+        max-width: 100%;
+      }
+
+
+      .collection h3{
+        padding: 0px;
+        margin: 10px;
+        font-family: Montserrat, sans-serif;
+        font-weight: 600;
+       font-style:oblique;
+       font-stretch: ultra-expanded;
+      }
+
+      .collection a{
+        color: black;
+        font-weight: bold;
+      }
+
+      .collection a:hover{
+        color: grey;
+        font-weight: bold;
+      }
+
+
+      .carousel-caption slide2{
+        position: absolute;
+        top: 55%;
+        transform: translateY(-80%);
+        left: -8%;
+      }
+
+      .slide2 h1{
+        transform: translateX(-310px);
+        font-weight: 700;
+        color: black;
+      }
+
+      .slide2 p{
+        font-weight: 600;
+        transform: translateX(-310px);
+        color: black;
+      }
+
+      .btn1{
+        background-color: white;
+        transform: translateX(-250px);
+        height: 45px;
+        width: 150px;
+        font-weight: bold;
+        color: black;
+        outline: none;
+        border: none;
+        font-size: smaller;
+      }
+
+      .btn1:hover{
+        background-color: black;
+        color: white;
+        transition: 0.4s;
+      }
+
+      .site-footer{
+        background-color: #26272b;
+        padding: 45px 0 20px;
+        font-size: 8;
+        line-height: 24px;
+        background-color: #c9bbb8;
+        
+      }
+
+      .site-footer hr{
+        border-top-color: #bbb;
+        opacity: 0.5;
+      }
+      .site-footer hr.small {
+        margin: 20px 0;
+      }
+
+   
+
+      .site-footer a{
+        color: #000000;
+        font-weight: 100;
+      }
+
+      .site-footer a:hover{
+        color: white;
+        text-decoration: none;
+      }
+
+      .footer-links{
+        padding-left: 0;
+        list-style: none;
+      }
+
+      .footer-links li{
+        display: block;
+        
+        padding-bottom: 5px;
+      }
+
+      .footer-links a{
+        color: #000000;
+        font-size: small;
+      }
+
+      .footer-links a:active,
+      .footer-links a:focus,
+      .footer-links a:hover{
+        color: #ffffff;
+        text-decoration: none;
+        
+      }
+
+      .footer-link.inline li{
+        display: inline-block;
+      }
+
+
+      .site-footer .social-icons{
+        text-align: right;
+      }
+
+      .site-footer .social-icons a{
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        margin-left: 6px;
+        margin-right: 0;
+        border-radius: 100%;
+        background-color: #33353d;
+      }
+
+      .copyright-text{
+        margin: 0;
+      }
+
+      @media (max-width: 991px){
+        .site-footer [class^="col-"]{
+          margin-bottom: 30px;
+        }
+      }
+
+      @media (max-width: 767px){
+        .site-footer{
+          padding-bottom: 0;
+        }
+      }
+
+      .site-footer .copyright-text,
+      .site-footer .social-icons{
+        text-align: center;
+      }
+
+      .social-icons{
+        padding-left: 0;
+        margin-bottom: 0;
+        list-style: none;
+      }
+
+      .social-icons li{
+        display: inline-block;
+        margin-bottom: 4px;
+      }
+      .social-icons a{
+        background-color: #eceeef;
+        color: #818a91;
+        font-size: 16px;
+        display: inline-block;
+        line-height: 44px;
+        width: 44px;
+        height: 44px;
+        text-align: center;
+        margin-right: 8px;
+        border-radius: 100%;
+        -webkit-transition: all 0.2s linear;
+        -o-transition: all 0.2s linear;
+        transition: all 0.2 linear;
+      }
+
+      .social-icons a:active,
+      .social-icons a:focus,
+      .social-icons a:hover{
+        color: white;
+        background-color: #29aafe;
+      }
+
+      .social-icons a.facebook:hover{
+        background-color: #3b5998;
+      }
+
+      .social-icons a.twitter:hover{
+        background-color: #ed0000;
+      }
+
+      .social-icons a.instagram:hover{
+        background-color: #ea4c89;
+      }
+
+      @media (max-width: 767 px){
+        .social-icons list-style{
+          display: block;
+          margin-right: 0;
+          font-weight: 600;
+        }
+      }
+
+    .navbar-brand{
+      margin: 0%;
+      padding: 0%;
+    }
+  }
+    </style>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+    <title>H&M | Women's, Men's & Kids' Fashion | H&M</title>
+
+  </head>
+  <body>
+  
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+          <div class="collapse navbar-collapse " id="navbarNav">
+              <ul class="navbar-nav mx-auto">
+                <li class="nav-item pb-0">
+                  <a class="navbar-brand" href="index.html">
+                      <img src="https://cdn.freebiesupply.com/images/large/2x/hm-logo-png-transparent.png"alt="" width="68" height="44" class="d-inline-block align-mid">
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+    </nav>
+    <nav class="navbar navbar-expand-lg bh-white">
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item pb-0">
+              <a class="nav-link pr-4" href="Women.html">Women</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link pr-4" href="Men.html">Men</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link pr-4" href="Kids.html">Kids</a>
+            </li>
+            <li class="nav-item pr-4">
+              <a class="nav-link" href="divide.html">Divide</a>
+            </li> 
+          </ul>
+        </div>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </nav>
+    <!--end of nav-->
+    <!--sliderr-->
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel" data-interval="2000">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <a href="" class="stretched-link"><img src="https://lp2.hm.com/hmgoepprod?source=url[https://www2.hm.com/content/dam/men_s03/mars_2021/3063d/3063D-3x2-the-effortless-overshirt.jpg]&scale=size[960]&sink=format[jpeg],quality[80]" class="d-block w-100" alt="..."></a>
+          <div class="carousel-caption slide1 d-none d-md-block">
+            <div class="container">
+              <div class="row justify-content-start ">
+                <div class="col-lg-8 text-center">
+                  <h1>The effortless overshirt</h1>
+                  <p>Layer Up like a pro</p>
+                  <button class="btn0 mt-3 ml-2">
+                    <a href="https://www2.hm.com/en_asia5/men/shop-by-product/jackets-and-coats/overshirts.html" style="color:inherit">Shop Now</a>
+                    </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>  
+        <div class="carousel-item">
+          <a href="" class="stretched-link"><img src="https://lp2.hm.com/hmgoepprod?source=url[https://www2.hm.com/content/dam/ladies_s03/mars_2021/2173a/2173A-3x2-breezy-bright-and-beautiful.jpg]&scale=size[960]&sink=format[jpeg],quality[80]" class="d-block w-100" alt="..."></a>
+          <div class="carousel-caption slide1 d-none d-md-block">
+            <div class="container">
+              <div class="row justify-content-start ">
+                <div class="col-lg-8 text-center">
+                  <h1>Breezy, bright and beautiful</h1>
+                  <p>Your favorite styles are upgraded</p>
+                  <p></p>
+                  <button class="btn0 mt-3 ml-2">
+                    <a href="https://www2.hm.com/en_asia5/productpage.0959263001.html" style="color:inherit">Shop Now</a>
+                    </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>  
+        <div class="carousel-item">
+          <a href="" class="stretched-link"><img src="https://lp2.hm.com/hmgoepprod?source=url[https://www2.hm.com/content/dam/divided_s03/mars_2021/5103c/5103C-3x2-cosy-rib-knits.jpg]&scale=size[960]&sink=format[jpeg],quality[80]" class="d-block w-100" alt="..."></a>
+          <div class="carousel-caption slide1 d-none d-md-block">
+            <div class="container">
+              <div class="row justify-content-start ">
+                <div class="col-lg-8 text-center">
+                  <h1>In love with rib knits</h1>
+                  <p>Stay chic</p>
+                  <p></p>
+                  <button class="btn0 mt-3 ml-2">
+                    <a href="https://www2.hm.com/en_asia5/productpage.0959263001.html" style="color:inherit">Shop Now</a>
+                    </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>  
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    <br>
+    
+    <section class="collection">
+      <div class="container py-5">
+        <h3 class="text-left ml-0">Kids</h3>
+          <div class="row py-5">
+
+            <div class="col-md-3">
+              <div class="card">
+                <img src="//lp2.hm.com/hmgoepprod?set=source[/95/9b/959b0f0bb4829f3ac198b631aa59117b3ac12128.jpg],origin[dam],category[],type[ENVIRONMENT],res[z],hmver[1]&call=url[file:/product/main]" class="class-img">
+                <a href="https://www2.hm.com/en_asia5/productpage.0937550001.html"class="stretched-link"></a>
+              </div>
+              <div class="text-left">
+                <h6><i>Patterned poplin dress</i></h6>
+                <h6>PHP899</h6>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card">
+                <img src="//lp2.hm.com/hmgoepprod?set=source[/ab/c0/abc0b94528b1bbcd0e1a98662c8d5186ffddb9bf.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]" class="class-img">
+                <a href="https://www2.hm.com/en_asia5/productpage.0966335001.html"class="stretched-link"></a>
+              </div>
+              <div class="text-left">
+                <h6><i>Floral cotton dress</i></h6>
+                <h6>PHP499</h6>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card">
+                <img src="//lp2.hm.com/hmgoepprod?set=source[/cb/9e/cb9e8a773c69d3460f7678560c96bc9b44d42bf9.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]" class="class-img">
+                <a href="https://www2.hm.com/en_asia5/productpage.0927294001.html"class="stretched-link"></a>
+              </div>
+              <div class="text-left">
+                <h6><i>Satin bomber jacket</i></h6>
+                <h6>PHP1,690</h6>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card">
+                <img src="//lp2.hm.com/hmgoepprod?set=source[/65/0f/650f1874fcbbe5ea0075d8c00c2df6ff23372295.jpg],origin[dam],category[],type[DESCRIPTIVESTILLLIFE],res[z],hmver[2]&call=url[file:/product/main]" class="class-img">
+                <a href="https://www2.hm.com/en_asia5/productpage.0938809001.html"class="stretched-link"></a>
+              </div>
+              <div class="text-left">
+                <h6><i>Printed T-shirt</i></h6>
+                <h6>PHP799</h6>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card">
+                <img src="//lp2.hm.com/hmgoepprod?set=source[/1b/fa/1bfa915d935635e362e33943edd661bc1522f323.jpg],origin[dam],category[],type[ENVIRONMENT],res[z],hmver[3]&call=url[file:/product/main]" class="class-img">
+                <a href="https://www2.hm.com/en_asia5/productpage.0937438001.html"class="stretched-link"></a>
+              </div>
+              <div class="text-left">
+                <h6><i>2-piece cotton set</i></h6>
+                <h6>PHP1,690</h6>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card">
+                <img src="//lp2.hm.com/hmgoepprod?set=source[/61/03/6103052cc7e946d87bfa66fe8ec12fc490bf4039.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]" class="class-img">
+                <a href="https://www2.hm.com/en_asia5/productpage.0957281001.html"class="stretched-link"></a>
+              </div>
+              <div class="text-left">
+                <h6><i>Floral cotton dress</i></h6>
+                <h6>PHP349</h6>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card">
+                <img src="//lp2.hm.com/hmgoepprod?set=source[/34/73/3473271abb8419fbef236be47d62c6d5a5601c75.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]" class="class-img">
+                <a href="https://www2.hm.com/en_asia5/productpage.0927200001.html"class="stretched-link"></a>
+              </div>
+              <div class="text-left">
+                <h6><i>Satin bomber jacket</i></h6>
+                <h6>PHP1,490</h6>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card">
+                <img src="//lp2.hm.com/hmgoepprod?set=source[/2c/99/2c99489e727b6fd96b40b040c4cdb9bc95060076.jpg],origin[dam],category[],type[DESCRIPTIVESTILLLIFE],res[z],hmver[2]&call=url[file:/product/main]" class="class-img">
+                <a href="https://www2.hm.com/en_asia5/productpage.0939058001.html"class="stretched-link"></a>
+              </div>
+              <div class="text-left">
+                <h6><i>Patterned shorts</i></h6>
+                <h6>PHP799</h6>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card">
+                <img src="//lp2.hm.com/hmgoepprod?set=source[/00/83/0083ae4ad084c5700c377189ab1d438998ddc978.jpg],origin[dam],category[],type[DESCRIPTIVESTILLLIFE],res[z],hmver[2]&call=url[file:/product/main]" class="class-img">
+                <a href="https://www2.hm.com/en_asia5/productpage.0956273001.html"class="stretched-link"></a>
+              </div>
+              <div class="text-left">
+                <h6><i>5-pack printed briefs</i></h6>
+                <h6>PHP599</h6>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card">
+                <img src="//lp2.hm.com/hmgoepprod?set=source[/fe/5f/fe5f9a78159bf7bac2c17a3e84de63a45f278956.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]" class="class-img">
+                <a href="https://www2.hm.com/en_asia5/productpage.0927200002.html"class="stretched-link"></a>
+              </div>
+              <div class="text-left">
+                <h6><i>Satin bomber jacket</i></h6>
+                <h6>PHP1,490</h6>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card">
+                <img src="//lp2.hm.com/hmgoepprod?set=source[/54/23/54239e382235863d84570c894e56d0d8ca912e24.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]" class="class-img">
+                <a href="https://www2.hm.com/en_asia5/productpage.0927215001.html"class="stretched-link"></a>
+              </div>
+              <div class="text-left">
+                <h6><i>Floral parka</i></h6>
+                <h6>PHP1,690</h6>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card">
+                <img src="//lp2.hm.com/hmgoepprod?set=source[/8f/71/8f71b15fbc876d67b4aa9bc4ad369da1cfecf45b.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]" class="class-img">
+                <a href="https://www2.hm.com/en_asia5/productpage.0957285001.html"class="stretched-link"></a>
+              </div>
+              <div class="text-left">
+                <h6><i>Motif-detail jersey top</i></h6>
+                <h6>PHP499</h6>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card">
+                <img src="//lp2.hm.com/hmgoepprod?set=source[/73/fa/73fa53af305b7e63706c8bbbca6e7bb984320dfe.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]" class="class-img">
+                <a href="https://www2.hm.com/en_asia5/productpage.0953655002.html"class="stretched-link"></a>
+              </div>
+              <div class="text-left">
+                <h6><i>Printed T-shirt</i></h6>
+                <h6>PHP499</h6>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card">
+                <img src="//lp2.hm.com/hmgoepprod?set=source[/2f/86/2f862eaad5e0a979fcac0128459e222b902df9da.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]" class="class-img">
+                <a href="https://www2.hm.com/en_asia5/productpage.0957285003.html"class="stretched-link"></a>
+              </div>
+              <div class="text-left">
+                <h6><i>Motif-detail jersey top</i></h6>
+                <h6>PHP499</h6>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card">
+                <img src="//lp2.hm.com/hmgoepprod?set=source[/2b/7a/2b7a08bbe37b4d6df330a89fd792e7c103adbc2d.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]" class="class-img">
+                <a href="https://www2.hm.com/en_asia5/productpage.0939052001.html"class="stretched-link"></a>
+              </div>
+              <div class="text-left">
+                <h6><i>Printed T-shirt</i></h6>
+                <h6>PHP499</h6>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card">
+                <img src="//lp2.hm.com/hmgoepprod?set=source[/b2/87/b287d74488cef865f228300a437799702a42cdd4.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]" class="class-img">
+                <a href="https://www2.hm.com/en_asia5/productpage.0939396001.html"class="stretched-link"></a>
+              </div>
+              <div class="text-left">
+                <h6><i>Button-front floral skirt</i></h6>
+                <h6>PHP1,190</h6>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card">
+                <img src="//lp2.hm.com/hmgoepprod?set=source[/e6/ee/e6ee2e2df9b8a0df2f2384e101f088e4819029ac.jpg],origin[dam],category[],type[LOOKBOOK],res[z],hmver[1]&call=url[file:/product/main]" class="class-img">
+                <a href="https://www2.hm.com/en_asia5/productpage.0957285002.html"class="stretched-link"></a>
+              </div>
+              <div class="text-left">
+                <h6><i>Motif-detail jersey top</i></h6>
+                <h6>PHP499</h6>
+              </div>
+            </div>
+            
+           
+
+            
+
+            <!---->
+           
+           
+         
+          </div>
+        </h1>
+      </div>
+    </section>
+    
+    <!--end of carousel-->
+
+
+
+
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-6 col-md-3">
+            <h6>SHOP</h6>
+            <ul class="footer-links inline">
+              <li><a href="WOMEN.html">WOMEN</a></li>
+              <li><a href="MEN.html">MEN</a></li>
+              <li><a href="KIDS.html">KIDS</a></li>
+              
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-3">
+            <h6>CORPORATE INFO</h6>
+            <ul class="footer-links inline">
+              <li><a href="http://career.hm.com/">Career at H&M</a></li>
+              <li><a href="https://www.guessusa.com/en/aboutus/">About H&M group</a></li>
+              <li><a href="https://hmgroup.com/sustainability.html">Sustainability</a></li>
+              <li><a href="https://about.hm.com/">Press</a></li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-3">
+            <h6>HELP</h6>
+            <ul class="footer-links inline">
+              <li><a href="https://www2.hm.com/en_asia5/customer-service.html">Customer Service</a></li>
+              <li><a href="http://www2.hm.com/en_asia5/login">My Account</a></li>
+              <li><a href="https://www2.hm.com/en_asia5/customer-service/shopping-at-hm/store-locator.html">Find a store</a></li>
+              <li><a href="https://www2.hm.com/en_asia5/customer-service/legal-and-privacy.html">Legal & Privacy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-3">
+            <h6>Sign up for newsletter</h6>
+            <ul class="footer-links inline">
+              <li><a href="">Sign up now and get 25% off one item.</a></li>
+            </ul>
+          </div>
+        </div>
+        <hr class="small">
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">Copyright &copy; 2021 All Rights Reserved by
+              <a href="https://www2.hm.com/en_asia5/index.html">H&M</a>
+            </p>
+          </div>
+          <div class="col-md-4 col-sm-6 col-12">
+            <ul class="social-icons">
+              <li><a class="facebook" href="https://www.facebook.com/hm"><i class="bi bi-facebook"></i></a></li>
+              <li><a class="twitter" href="https://www.twitter.com/hm"><i class="bi bi-twitter"></i></a></li>
+              <li><a class="instagram" href="https://www.instagram.com/hm"><i class="bi bi-instagram"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+  </body>
+</html>
